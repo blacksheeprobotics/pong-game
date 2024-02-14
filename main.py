@@ -8,10 +8,8 @@ screen.bgcolor("black")
 screen.title("Pong Game")
 screen.tracer(0)
 
-paddle1 = Paddle()
-paddle1.goto(360,0)
-paddle2 = Paddle()
-paddle2.goto(-360, 0)
+paddle1 = Paddle((360, 0))
+paddle2 = Paddle((-360, 0))
 screen.update()
 
 screen.listen()
