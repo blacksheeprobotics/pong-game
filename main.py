@@ -8,15 +8,15 @@ screen.bgcolor("black")
 screen.title("Pong Game")
 screen.tracer(0)
 
-paddle1 = Paddle((360, 0))
-paddle2 = Paddle((-360, 0))
+right_paddle = Paddle((360, 0))
+left_paddle = Paddle((-360, 0))
 screen.update()
 
 screen.listen()
-screen.onkey(paddle1.up, "Up")
-screen.onkey(paddle1.down, "Down")
-screen.onkey(paddle2.up, "a")
-screen.onkey(paddle2.down, "z")
+screen.onkey(right_paddle.up, "Up")
+screen.onkey(right_paddle.down, "Down")
+screen.onkey(left_paddle.up, "a")
+screen.onkey(left_paddle.down, "z")
 
 game_is_on = True
 
