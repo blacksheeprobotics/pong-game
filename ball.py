@@ -1,8 +1,5 @@
 from turtle import Turtle
 
-UPPER_BOUND = 290
-LOWER_BOUND = -290
-
 
 class Ball(Turtle):
     def __init__(self):
