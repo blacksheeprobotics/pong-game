@@ -2,8 +2,6 @@ from turtle import Turtle
 
 UPPER_BOUND = 290
 LOWER_BOUND = -290
-OFFSET_X = 10
-OFFSET_Y = 10
 
 
 class Ball(Turtle):
@@ -14,19 +12,15 @@ class Ball(Turtle):
         self.color("white")
         self.width = 20
         self.height = 20
+        self.x_move = 10
+        self.y_move = 10
 
     def move(self):
-        global OFFSET_X, OFFSET_Y
 
-        new_x = self.xcor() + OFFSET_X
-        new_y = self.ycor() + OFFSET_Y
-
-        if new_y >= UPPER_BOUND:
-            new_y = UPPER_BOUND
-            OFFSET_Y = -OFFSET_Y
-
-        if new_y <= LOWER_BOUND:
-            new_y = LOWER_BOUND
-            OFFSET_Y = -OFFSET_Y
+        new_x = self.xcor() + self.x_move
+        new_y = self.ycor() + self.y_move
 
         self.goto(new_x, new_y)
+
+    def bounce(self):
+        self.y_move *= -1
